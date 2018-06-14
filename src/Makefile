@@ -24,8 +24,9 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+CPP = g++
 LEX = flex
-YACC   = bison -y
+YACC   = bison -d
 DEFINE = 
 INCPATH = -I. -Iarbiters -Iallocators -Irouters -Inetworks -Ipower
 CPPFLAGS += -Wall $(INCPATH) $(DEFINE)
@@ -33,6 +34,7 @@ CPPFLAGS += -O3
 CPPFLAGS += -g
 LFLAGS +=
 
+OBJDIR := obj
 PROG := booksim
 
 # simulator source files
